@@ -6,7 +6,7 @@
       <h1>Joke of the day:</h1><br/>
 
       <ul v-if="posts && posts.length">
-        <p><strong>{{post.value}}</strong></p>
+        <p><strong>{{posts.value}}</strong></p>
       </ul>
 
       </div>
@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
