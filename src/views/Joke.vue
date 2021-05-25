@@ -4,11 +4,10 @@
     <div class="row" align="center">
       <div class="col-md-12 col-18 my-2">
       <h1>Joke of the day:</h1><br/>
-
       <ul v-if="posts && posts.length">
+        <img v-bind:src="posts.icon_url">
         <p><strong>{{posts.value}}</strong></p>
       </ul>
-
       </div>
     </div>
   </div>
@@ -19,7 +18,7 @@
         <v-card align="center"> 
           <v-col cols="15">
             <h3>Search for joke</h3><br/>  
-          <input type="text" v-model="search" placeholder="Type something the se..." /><br /><br /><br />
+          <input type="text" placeholder="Type something the se..." /><br /><br /><br />
           <v-row justify="end"><v-btn class="white--text" color="green">MAKE ME LAUGH</v-btn></v-row>
           </v-col>
         </v-card>
@@ -40,8 +39,7 @@ export default {
   },
   created() {
     axios.get(`https://api.chucknorris.io/jokes/random`)
-    .then(response => {
-      this.posts = response.value
+    .then(response => { this.posts = response.value
     })
   }
 }
