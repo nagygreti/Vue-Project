@@ -39,7 +39,7 @@ export default {
   },
   created() {
     axios.get(`https://api.chucknorris.io/jokes/random`)
-    .then(response => { this.posts = response.value
+    .then(response => { this.posts = response.data
     })
   }
 }

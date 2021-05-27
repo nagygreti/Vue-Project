@@ -6,14 +6,12 @@
           <v-col cols="12" md="6" lg="4"
           v-for="(product, i) in parsedProducts" :key="i" >
           <v-card>
-          <img v-bind:src="product.pic" width="344" height="200" class="img-responsive"><br/>
-          <card-title class="title">{{product.title}}</card-title><br/>
-          <card-text>{{product.subtitle}}</card-text>  
+          <img v-bind:src="product.pic" width="344" height="200" class="img-responsive">
+          <v-card-title class="title">{{product.title}}</v-card-title>
+          <v-card-text>{{product.subtitle}}</v-card-text>  
           <template v-slot:action-button>
-          <div class="d-flex justify-end">
-          <v-btn color="red" text@click="$router.push('/about/${product.id}')">SHOW MORE
-          </v-btn>
-          </div>
+          <v-row justify="end"><v-btn color="red" text@click="$router.push('/about/${product.id}')">SHOW MORE
+          </v-btn></v-row>
           </template>
           </v-card>
           </v-col>

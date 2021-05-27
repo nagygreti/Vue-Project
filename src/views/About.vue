@@ -3,10 +3,10 @@
     <v-row>
       <v-col>
           <div class="mt-5 mb-5">
-            <img v-bind:src="product.pic" width="1032" height="400" class="img-responsive"><br/>
-            <card-title class="title">{{product.title}}</card-title><br/>
-            <card-text>{{product.subtitle}}</card-text><br/><br/>
-            <card-text>{{product.description}}</card-text>
+            <img v-bind:src="product.pic" width="1032" height="400" class="img-responsive">
+            <v-card-title class="title">{{product.title}}</v-card-title>
+            <v-card-text>{{product.subtitle}}</v-card-text>
+            <v-card-text>{{product.description}}</v-card-text>
           </div>
       </v-col>
     </v-row>
